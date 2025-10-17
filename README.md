@@ -2,7 +2,7 @@
 
 Practice projects for learning pointers and dynamic memory in C++ (Chapter 10.1-10.2).
 
-These projects are part of the **COS 110** course at the University of Pretoria.
+**Unofficial practice materials** designed to help COS 110 students at the University of Pretoria master pointer concepts.
 
 ## 📚 Projects Overview
 
