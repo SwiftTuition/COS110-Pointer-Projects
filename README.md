@@ -43,7 +43,7 @@ Create and manage 2D dynamic arrays (matrices) with proper multi-level allocatio
 
 **Files:** README.md, Makefile, main.cpp (starter), solution/
 
-## 🚀 Quick Start
+## Quick Start
 
 ### GitHub Codespaces (Recommended)
 
@@ -78,7 +78,7 @@ make
 - **Compiler:** g++ with `-std=c++98 -Wall -Wextra -pedantic` flags
 - **Tools:** make (Makefiles provided for all projects)
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing these projects, you will master:
 
@@ -119,28 +119,16 @@ make memcheck # Check for memory leaks (requires valgrind)
 - **Compilation Errors:** Read error messages carefully - they point to the line and issue
 - **Logic Errors:** Add `cout` statements to trace variable values
 
-## 📚 Additional Resources
+## Additional Resources
 
 - **Textbook:** Absolute C++ (Chapter 10.1-10.2)
 - **Lecture Slides:** Available on ClickUP
-- **Tutor Support:** Contact via WhatsApp or office hours
+- **Premium Tutoring:** Free students can upgrade to premium for personalized support. Premium students can ask questions in the premium WhatsApp group.
 
-## 🤝 Contributing
+## Support
 
-These projects are for educational purposes. Feel free to:
-
-- Fork the repository
-- Create your own variations
-- Share improvements (via pull requests)
-
-## 📧 Support
-
-Need help? Contact your **COS 110 tutor** or post in the discussion forum.
+Having issues with the projects? Use the **Issues** tab above to report bugs or problems.
 
 ---
 
-**Created for COS 110 students at University of Pretoria**
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>
+**Created for COS 110 students at University of Pretoria by Swift Tuition**
