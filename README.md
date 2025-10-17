@@ -45,19 +45,55 @@ Create and manage 2D dynamic arrays (matrices) with proper multi-level allocatio
 
 ## Quick Start
 
-### GitHub Codespaces (Recommended)
+### Option 1: GitHub Codespaces (Recommended - No Installation Required!)
 
+**What is Codespaces?** GitHub provides a free cloud-based development environment that runs Ubuntu Linux with all the tools you need (g++, make, valgrind) already installed. You code directly in your browser - no setup required!
+
+**Steps:**
 1. Click the green **"Code"** button at the top of this repository
 2. Select the **"Codespaces"** tab
 3. Click **"Create codespace on main"**
-4. Wait for the environment to load
-5. Navigate to a project folder and run:
+4. **Wait approximately 2 minutes** for the environment to build
+   - GitHub is setting up a complete Ubuntu Linux environment for you
+   - Installing C++ compiler (g++), build tools (make), and memory debugger (valgrind)
+   - You'll see a progress bar and terminal output - this is normal!
+5. Once loaded, you'll see VS Code in your browser
+6. Open the terminal (View → Terminal or Ctrl+`)
+7. Navigate to a project and run:
    ```bash
+   cd project1_dynamic_array
    make
-   ./program_name
+   ./array_manager
    ```
 
-### Local Development
+**Codespaces is completely free** for students and includes 60 hours/month of usage.
+
+### Option 2: Local Development (Windows with WSL)
+
+If you're using Windows, you can use **WSL (Windows Subsystem for Linux)** to run these projects locally:
+
+**One-time setup:**
+1. Install WSL2 with Ubuntu:
+   ```powershell
+   wsl --install
+   ```
+2. Restart your computer when prompted
+3. Open Ubuntu from the Start menu
+4. Install build tools:
+   ```bash
+   sudo apt update
+   sudo apt install build-essential git valgrind
+   ```
+
+**Clone and run projects:**
+```bash
+git clone https://github.com/SwiftTuition/COS110-Pointer-Projects.git
+cd COS110-Pointer-Projects/project1_dynamic_array
+make
+./array_manager
+```
+
+### Option 3: Local Development (Linux/macOS)
 
 **Clone the repository:**
 ```bash
