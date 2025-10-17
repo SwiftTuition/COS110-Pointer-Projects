@@ -1,0 +1,101 @@
+=== SAMPLE RUN 1: Normal Case ===
+
+=== Dynamic Array Manager ===
+
+How many integers would you like to store? 5
+
+Enter value 1: 42
+Enter value 2: 17
+Enter value 3: 89
+Enter value 4: 3
+Enter value 5: 56
+
+Your array contains: 42 17 89 3 56
+
+Statistics:
+Sum: 207
+Average: 41.4
+Minimum: 3
+Maximum: 89
+
+Memory deallocated. Programme complete.
+
+=====================================
+
+=== SAMPLE RUN 2: Single Element ===
+
+=== Dynamic Array Manager ===
+
+How many integers would you like to store? 1
+
+Enter value 1: 100
+
+Your array contains: 100
+
+Statistics:
+Sum: 100
+Average: 100
+Minimum: 100
+Maximum: 100
+
+Memory deallocated. Programme complete.
+
+=====================================
+
+=== SAMPLE RUN 3: Larger Array ===
+
+=== Dynamic Array Manager ===
+
+How many integers would you like to store? 8
+
+Enter value 1: 12
+Enter value 2: 45
+Enter value 3: 7
+Enter value 4: 89
+Enter value 5: 23
+Enter value 6: 56
+Enter value 7: 34
+Enter value 8: 91
+
+Your array contains: 12 45 7 89 23 56 34 91
+
+Statistics:
+Sum: 357
+Average: 44.625
+Minimum: 7
+Maximum: 91
+
+Memory deallocated. Programme complete.
+
+=====================================
+
+=== SAMPLE RUN 4: Negative Numbers ===
+
+=== Dynamic Array Manager ===
+
+How many integers would you like to store? 4
+
+Enter value 1: -10
+Enter value 2: 5
+Enter value 3: -3
+Enter value 4: 8
+
+Your array contains: -10 5 -3 8
+
+Statistics:
+Sum: 0
+Average: 0
+Minimum: -10
+Maximum: 8
+
+Memory deallocated. Programme complete.
+
+=====================================
+
+=== SAMPLE RUN 5: Invalid Size ===
+
+=== Dynamic Array Manager ===
+
+How many integers would you like to store? 0
+
+Invalid size. Programme terminated.

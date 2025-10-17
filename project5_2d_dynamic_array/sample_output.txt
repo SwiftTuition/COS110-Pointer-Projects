@@ -1,0 +1,304 @@
+=== SAMPLE RUN: Complete Session ===
+
+=== 2D Dynamic Array Manager ===
+
+Enter number of rows: 3
+Enter number of columns: 4
+
+Matrix allocated: 3 rows x 4 columns
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 2
+
+--- Fill Matrix with Random Values ---
+
+Matrix filled with random values (0-99).
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 3
+
+--- Current Matrix (3 x 4) ---
+   42   17   89   23
+   56   34   91   12
+    8   67   45   71
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 4
+
+--- Row Sums ---
+Row 0: 171
+Row 1: 193
+Row 2: 191
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 5
+
+--- Column Sums ---
+Column 0: 106
+Column 1: 118
+Column 2: 225
+Column 3: 106
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 6
+
+--- Min and Max Values ---
+Minimum: 8 (at row 2, column 0)
+Maximum: 91 (at row 1, column 2)
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 7
+
+--- Transpose Matrix ---
+Original matrix was 3 x 4
+Transposed matrix is 4 x 3
+
+New matrix:
+--- Current Matrix (4 x 3) ---
+   42   56    8
+   17   34   67
+   89   91   45
+   23   12   71
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 9
+
+Deallocating matrix...
+Programme complete!
+
+=====================================
+
+=== SAMPLE RUN 2: Manual Fill and Matrix Addition ===
+
+=== 2D Dynamic Array Manager ===
+
+Enter number of rows: 2
+Enter number of columns: 2
+
+Matrix allocated: 2 rows x 2 columns
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 1
+
+--- Fill Matrix Manually ---
+
+Enter value for [0][0]: 1
+Enter value for [0][1]: 2
+Enter value for [1][0]: 3
+Enter value for [1][1]: 4
+
+Matrix filled successfully.
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 3
+
+--- Current Matrix (2 x 2) ---
+    1    2
+    3    4
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 8
+
+--- Add Another Matrix ---
+
+Enter rows for second matrix: 2
+Enter columns for second matrix: 2
+
+Fill second matrix:
+Fill (m)anually or (r)andomly? m
+
+--- Fill Matrix Manually ---
+
+Enter value for [0][0]: 5
+Enter value for [0][1]: 6
+Enter value for [1][0]: 7
+Enter value for [1][1]: 8
+
+Matrix filled successfully.
+
+Result of addition:
+--- Current Matrix (2 x 2) ---
+    6    8
+   10   12
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 9
+
+Deallocating matrix...
+Programme complete!
+
+=====================================
+
+=== SAMPLE RUN 3: Dimension Mismatch Error ===
+
+=== 2D Dynamic Array Manager ===
+
+Enter number of rows: 2
+Enter number of columns: 3
+
+Matrix allocated: 2 rows x 3 columns
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 2
+
+--- Fill Matrix with Random Values ---
+
+Matrix filled with random values (0-99).
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 8
+
+--- Add Another Matrix ---
+
+Enter rows for second matrix: 3
+Enter columns for second matrix: 2
+
+Dimensions do not match! Cannot add matrices.
+First matrix is 2 x 3
+Second matrix is 3 x 2
+
+Main Menu:
+1. Fill matrix manually
+2. Fill matrix with random values
+3. Display matrix
+4. Calculate row sums
+5. Calculate column sums
+6. Find min and max
+7. Transpose matrix
+8. Add another matrix
+9. Exit
+
+Enter your choice: 9
+
+Deallocating matrix...
+Programme complete!

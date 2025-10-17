@@ -1,0 +1,276 @@
+=== SAMPLE RUN 1: Getting All Scenarios Correct ===
+
+=== Memory Leak Detective ===
+Learn to identify and fix memory management errors
+
+Choose a scenario to investigate:
+1. Simple Memory Leak
+2. Dangling Pointer
+3. Double Deletion
+4. Wrong Delete Operator
+5. Lost Address
+6. Array Memory Leak
+7. Exit
+
+Enter your choice: 1
+
+--- Scenario 1: Simple Memory Leak ---
+
+Here's the buggy code:
+-------------------
+void leakyFunction()
+{
+    int* numbers = new int[100];
+    numbers[0] = 42;
+    cout << numbers[0] << endl;
+}
+-------------------
+
+What's wrong with this code?
+(a) Nothing - it's fine
+(b) Memory leak - never deleted
+(c) Dangling pointer
+(d) Wrong delete operator
+
+Your answer: b
+
+Correct! This code allocates 100 integers but never frees them.
+
+Here's the fixed code:
+-------------------
+void fixedFunction()
+{
+    int* numbers = new int[100];
+    numbers[0] = 42;
+    cout << numbers[0] << endl;
+    delete[] numbers;  // Properly deallocate
+    numbers = 0;        // Avoid dangling pointer
+}
+-------------------
+
+Press Enter to continue...
+
+Choose a scenario to investigate:
+1. Simple Memory Leak
+2. Dangling Pointer
+3. Double Deletion
+4. Wrong Delete Operator
+5. Lost Address
+6. Array Memory Leak
+7. Exit
+
+Enter your choice: 2
+
+--- Scenario 2: Dangling Pointer ---
+
+Here's the buggy code:
+-------------------
+void danglingFunction()
+{
+    int* ptr = new int(10);
+    delete ptr;
+    *ptr = 20;  // What happens here?
+    cout << *ptr << endl;
+}
+-------------------
+
+What's the main problem with this code?
+(a) Memory leak
+(b) Using pointer after deletion (dangling pointer)
+(c) Wrong delete operator
+(d) Double deletion
+
+Your answer: b
+
+Correct! After 'delete ptr', the pointer becomes dangling.
+Accessing it with '*ptr = 20' is undefined behaviour.
+
+Here's the fixed code:
+-------------------
+void fixedFunction()
+{
+    int* ptr = new int(10);
+    cout << *ptr << endl;  // Use it before deletion
+    delete ptr;
+    ptr = 0;  // Set to NULL to avoid accidents
+    // Don't use ptr after this point
+}
+-------------------
+
+Press Enter to continue...
+
+Choose a scenario to investigate:
+1. Simple Memory Leak
+2. Dangling Pointer
+3. Double Deletion
+4. Wrong Delete Operator
+5. Lost Address
+6. Array Memory Leak
+7. Exit
+
+Enter your choice: 7
+
+=== Final Results ===
+You attempted 2 scenarios.
+You got 2 correct.
+Score: 100%
+
+Thank you for using Memory Leak Detective!
+
+=====================================
+
+=== SAMPLE RUN 2: Making Some Mistakes ===
+
+=== Memory Leak Detective ===
+Learn to identify and fix memory management errors
+
+Choose a scenario to investigate:
+1. Simple Memory Leak
+2. Dangling Pointer
+3. Double Deletion
+4. Wrong Delete Operator
+5. Lost Address
+6. Array Memory Leak
+7. Exit
+
+Enter your choice: 4
+
+--- Scenario 4: Wrong Delete Operator ---
+
+Here's the buggy code:
+-------------------
+void wrongDeleteFunction()
+{
+    int* arr = new int[50];
+    arr[0] = 10;
+    delete arr;  // Is this correct?
+}
+-------------------
+
+What's wrong with this code?
+(a) Memory leak
+(b) Should use 'delete[]' for arrays
+(c) Dangling pointer
+(d) Nothing - it's fine
+
+Your answer: a
+
+Incorrect. The correct answer is (b).
+When you allocate an array with 'new int[50]', you must
+deallocate it with 'delete[] arr', not just 'delete arr'.
+
+Here's the fixed code:
+-------------------
+void fixedFunction()
+{
+    int* arr = new int[50];
+    arr[0] = 10;
+    delete[] arr;  // Correct: use delete[] for arrays
+    arr = 0;
+}
+-------------------
+
+Press Enter to continue...
+
+Choose a scenario to investigate:
+1. Simple Memory Leak
+2. Dangling Pointer
+3. Double Deletion
+4. Wrong Delete Operator
+5. Lost Address
+6. Array Memory Leak
+7. Exit
+
+Enter your choice: 6
+
+--- Scenario 6: Array Memory Leak ---
+
+Here's the buggy code:
+-------------------
+void processData(int size)
+{
+    int* data = new int[size];
+    for (int i = 0; i < size; i++)
+        data[i] = i * 2;
+
+    if (size > 100)
+        return;  // Early exit!
+
+    delete[] data;
+}
+-------------------
+
+What's wrong with this code?
+(a) Wrong delete operator
+(b) Memory leak when size > 100
+(c) Dangling pointer
+(d) Nothing - it's fine
+
+Your answer: b
+
+Correct! When size > 100, the function returns early without
+deleting the array. This is a memory leak on that execution path.
+
+Here's the fixed code:
+-------------------
+void fixedFunction(int size)
+{
+    int* data = new int[size];
+    for (int i = 0; i < size; i++)
+        data[i] = i * 2;
+
+    if (size > 100)
+    {
+        delete[] data;  // Clean up before return
+        data = 0;
+        return;
+    }
+
+    delete[] data;
+    data = 0;
+}
+-------------------
+
+Press Enter to continue...
+
+Choose a scenario to investigate:
+1. Simple Memory Leak
+2. Dangling Pointer
+3. Double Deletion
+4. Wrong Delete Operator
+5. Lost Address
+6. Array Memory Leak
+7. Exit
+
+Enter your choice: 7
+
+=== Final Results ===
+You attempted 2 scenarios.
+You got 1 correct.
+Score: 50%
+
+Thank you for using Memory Leak Detective!
+
+=====================================
+
+=== SAMPLE RUN 3: Testing All Scenarios ===
+
+[Similar format for all 6 scenarios...]
+
+Choose a scenario to investigate:
+1. Simple Memory Leak
+2. Dangling Pointer
+3. Double Deletion
+4. Wrong Delete Operator
+5. Lost Address
+6. Array Memory Leak
+7. Exit
+
+Enter your choice: 7
+
+=== Final Results ===
+You attempted 6 scenarios.
+You got 5 correct.
+Score: 83.3333%
+
+Thank you for using Memory Leak Detective!

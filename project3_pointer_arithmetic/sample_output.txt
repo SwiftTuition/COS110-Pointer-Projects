@@ -1,0 +1,186 @@
+=== SAMPLE RUN 1: Complete Workshop ===
+
+=== Pointer Arithmetic Workshop ===
+
+--- Section 1: Basic Pointer Arithmetic ---
+
+We have an array: int arr[] = {10, 20, 30, 40, 50};
+The array starts at memory address: 0x7ffd9c8d5a60
+
+Let's explore pointer arithmetic:
+
+arr + 0 points to: 0x7ffd9c8d5a60  (value: 10)
+arr + 1 points to: 0x7ffd9c8d5a64  (value: 20)
+arr + 2 points to: 0x7ffd9c8d5a68  (value: 30)
+arr + 3 points to: 0x7ffd9c8d5a6c  (value: 40)
+arr + 4 points to: 0x7ffd9c8d5a70  (value: 50)
+
+Notice: Each address increases by 4 bytes (sizeof(int) = 4)
+
+--- Section 2: Array Subscript vs Pointer Notation ---
+
+These two notations are equivalent:
+
+arr[0] is the same as *(arr + 0) = 10
+arr[1] is the same as *(arr + 1) = 20
+arr[2] is the same as *(arr + 2) = 30
+arr[3] is the same as *(arr + 3) = 40
+arr[4] is the same as *(arr + 4) = 50
+
+--- Section 3: Pointer Differences ---
+
+We have two pointers:
+ptr1 points to: 0x7ffd9c8d5a80 (value: 100)
+ptr2 points to: 0x7ffd9c8d5a90 (value: 500)
+
+ptr2 - ptr1 = 4 elements
+Byte difference: 16 bytes
+(Which is 4 elements * 4 bytes per int)
+
+--- Section 4: Different Data Types ---
+
+int array:
+sizeof(int) = 4 bytes
+intArr:     0x7ffd9c8d5aa0
+intArr + 1: 0x7ffd9c8d5aa4
+Difference: 4 bytes
+
+char array:
+sizeof(char) = 1 byte
+charArr:     0x7ffd9c8d5ab0
+charArr + 1: 0x7ffd9c8d5ab1
+Difference: 1 byte
+
+double array:
+sizeof(double) = 8 bytes
+doubleArr:     0x7ffd9c8d5ac0
+doubleArr + 1: 0x7ffd9c8d5ac8
+Difference: 8 bytes
+
+Key point: Adding 1 to a pointer increases the address by sizeof(type) bytes!
+
+--- Interactive Exercises ---
+
+Exercise 1:
+Given: int values[] = {100, 200, 300, 400};
+       int* ptr = values;
+
+Question: What is the value of *(ptr + 2)?
+Your answer: 300
+
+Correct! *(ptr + 2) accesses the element at index 2, which is 300.
+
+Exercise 2:
+Given: int data[] = {50, 60, 70, 80, 90};
+       int* p = data + 1;
+
+Question: What is the value of *(p + 2)?
+Your answer: 80
+
+Correct! p points to data[1] (60), so p + 2 points to data[3] (80).
+
+Exercise 3:
+Given: int nums[] = {10, 20, 30, 40, 50, 60};
+       int* first = nums;
+       int* last = nums + 5;
+
+Question: What is the value of (last - first)?
+Your answer: 5
+
+Correct! The pointer difference gives the number of elements between them.
+
+Exercise 4:
+Given: int sequence[] = {2, 4, 6, 8};
+
+Question: Rewrite sequence[3] using pointer notation.
+What value does it represent? 8
+
+Correct! sequence[3] is *(sequence + 3) = 8.
+
+Exercise 5:
+Given: sizeof(int) = 4 bytes
+       int* ptr is at address 0x1000
+
+Question: What address does (ptr + 3) point to? (in hex)
+Hint: Calculate 0x1000 + (3 * 4)
+Enter as decimal: 4108
+
+Correct! Adding 3 to the pointer adds 3 * sizeof(int) = 12 bytes.
+
+=== Exercise Results ===
+You scored 5 out of 5
+Percentage: 100%
+
+Perfect score! You've mastered pointer arithmetic!
+
+Programme complete!
+
+=====================================
+
+=== SAMPLE RUN 2: Making Some Mistakes ===
+
+=== Pointer Arithmetic Workshop ===
+
+[... Sections 1-4 same as above ...]
+
+--- Interactive Exercises ---
+
+Exercise 1:
+Given: int values[] = {100, 200, 300, 400};
+       int* ptr = values;
+
+Question: What is the value of *(ptr + 2)?
+Your answer: 200
+
+Incorrect. *(ptr + 2) is the same as values[2], which is 300.
+
+Exercise 2:
+Given: int data[] = {50, 60, 70, 80, 90};
+       int* p = data + 1;
+
+Question: What is the value of *(p + 2)?
+Your answer: 70
+
+Incorrect. p points to 60, so p + 2 points to 80.
+
+Exercise 3:
+Given: int nums[] = {10, 20, 30, 40, 50, 60};
+       int* first = nums;
+       int* last = nums + 5;
+
+Question: What is the value of (last - first)?
+Your answer: 20
+
+Incorrect. Subtracting pointers gives the number of elements: 5.
+
+Exercise 4:
+Given: int sequence[] = {2, 4, 6, 8};
+
+Question: Rewrite sequence[3] using pointer notation.
+What value does it represent? 8
+
+Correct! sequence[3] is *(sequence + 3) = 8.
+
+Exercise 5:
+Given: sizeof(int) = 4 bytes
+       int* ptr is at address 0x1000
+
+Question: What address does (ptr + 3) point to? (in hex)
+Hint: Calculate 0x1000 + (3 * 4)
+Enter as decimal: 1003
+
+Incorrect. The answer is 4108 (0x100c).
+Adding 3 adds 3 * sizeof(int) = 12 bytes to the address.
+
+=== Exercise Results ===
+You scored 1 out of 5
+Percentage: 20%
+
+Keep practising! Pointer arithmetic takes time to master.
+
+Programme complete!
+
+=====================================
+
+NOTE: Memory addresses shown (like 0x7ffd9c8d5a60) will be different each time the
+programme runs. The differences between addresses will remain consistent.

@@ -1,0 +1,311 @@
+=== SAMPLE RUN: Complete Session ===
+
+=== Student Records System ===
+
+How many students would you like to track? 3
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 1
+
+--- Add Student Record ---
+Student 1 of 3:
+
+Student number: u12345678
+Student name: Alice Smith
+Module 1 mark: 75
+Module 2 mark: 82
+Module 3 mark: 79
+
+Student added. Average: 78.67%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 1
+
+--- Add Student Record ---
+Student 2 of 3:
+
+Student number: u23456789
+Student name: Bob Jones
+Module 1 mark: 90
+Module 2 mark: 88
+Module 3 mark: 92
+
+Student added. Average: 90.00%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 1
+
+--- Add Student Record ---
+Student 3 of 3:
+
+Student number: u34567890
+Student name: Carol Williams
+Module 1 mark: 68
+Module 2 mark: 71
+Module 3 mark: 73
+
+Student added. Average: 70.67%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 2
+
+--- All Student Records ---
+
+Student Number  | Name                 | Mod1  | Mod2  | Mod3  | Average
+---------------------------------------------------------------------------
+u12345678       | Alice Smith          |  75   |  82   |  79   | 78.67%
+u23456789       | Bob Jones            |  90   |  88   |  92   | 90.00%
+u34567890       | Carol Williams       |  68   |  71   |  73   | 70.67%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 3
+
+--- Search for Student ---
+
+Enter student number to search: u23456789
+
+Student found:
+Student Number: u23456789
+Name: Bob Jones
+Module 1 mark: 90
+Module 2 mark: 88
+Module 3 mark: 92
+Average: 90.00%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 4
+
+--- Top Student ---
+
+Bob Jones (u23456789) has the highest average: 90.00%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 5
+
+--- Class Average ---
+
+Class average: 79.78%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 6
+
+--- Sort by Average ---
+
+Students sorted by average (descending):
+
+--- All Student Records ---
+
+Student Number  | Name                 | Mod1  | Mod2  | Mod3  | Average
+---------------------------------------------------------------------------
+u23456789       | Bob Jones            |  90   |  88   |  92   | 90.00%
+u12345678       | Alice Smith          |  75   |  82   |  79   | 78.67%
+u34567890       | Carol Williams       |  68   |  71   |  73   | 70.67%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 7
+
+Cleaning up memory...
+Programme complete!
+
+=====================================
+
+=== SAMPLE RUN 2: Edge Cases ===
+
+=== Student Records System ===
+
+How many students would you like to track? 2
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 2
+
+--- All Student Records ---
+
+No student records to display.
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 4
+
+--- Top Student ---
+
+No student records available.
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 1
+
+--- Add Student Record ---
+Student 1 of 2:
+
+Student number: u11111111
+Student name: Test Student
+Module 1 mark: 150
+Invalid mark. Please enter a value between 0 and 100.
+Module 1 mark: -10
+Invalid mark. Please enter a value between 0 and 100.
+Module 1 mark: 85
+Module 2 mark: 90
+Module 3 mark: 88
+
+Student added. Average: 87.67%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 1
+
+--- Add Student Record ---
+Student 2 of 2:
+
+Student number: u22222222
+Student name: Another Student
+Module 1 mark: 60
+Module 2 mark: 65
+Module 3 mark: 70
+
+Student added. Average: 65.00%
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 1
+
+--- Add Student Record ---
+Cannot add more students. Array is full.
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 3
+
+--- Search for Student ---
+
+Enter student number to search: u99999999
+
+Student with number u99999999 not found.
+
+Main Menu:
+1. Add student record
+2. Display all students
+3. Search for student
+4. Find top student
+5. Calculate class average
+6. Sort by average
+7. Exit
+
+Enter your choice: 7
+
+Cleaning up memory...
+Programme complete!
